@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="20"
+
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="10dp"
+        >
+
+        <Button
+            android:id="@+id/btn_homeFragment_startRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/res_btn_home_startRoute"
+            app:layout_constraintBottom_toTopOf="@+id/et_homeFragment_poiName"
+            app:layout_constraintEnd_toStartOf="@+id/btn_homeFragment_stopRoute"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_homeFragment_stopRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/res_btn_home_stopRoute"
+            app:layout_constraintBottom_toTopOf="@+id/btn_homeFragment_createPoi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_homeFragment_startRoute"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_homeFragment_poiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/res_et_home_poiHintText"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_homeFragment_createPoi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_homeFragment_startRoute" />
+
+        <Button
+            android:id="@+id/btn_homeFragment_createPoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/res_btn_home_createPoi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/et_homeFragment_poiName"
+            app:layout_constraintTop_toBottomOf="@+id/btn_homeFragment_stopRoute" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mv_homeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_weight="80"/>
+
+
+</LinearLayout>

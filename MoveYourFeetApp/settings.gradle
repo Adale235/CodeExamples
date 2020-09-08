@@ -1,0 +1,2 @@
+rootProject.name='MoveYourFeet'
+include ':app'

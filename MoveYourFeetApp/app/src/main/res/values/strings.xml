@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MoveYourFeet</string>
+
+    <!-- Menu res-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- home view -->
+    <string name="res_btn_home_startRoute">Start route</string>
+    <string name="res_btn_home_stopRoute">Stop route</string>
+    <string name="res_btn_home_createPoi">Create map marker</string>
+    <string name="res_et_home_poiHintText">Map marker name</string>
+
+    <!-- statistics fragment-->
+    <string name="res_btn_statistic_deleteData">Delete statistic Data</string>
+</resources>
